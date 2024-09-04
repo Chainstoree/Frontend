@@ -7,32 +7,32 @@ const ExploreProduct = () => {
     {
       name: "iPhone 14 Pro Max",
       price: 0.001,
-      imageUrl: "/assets/images/cart/cart1.jpg",
+      imageUrl: "/assets/images/cart/Cart1.jpg",
     },
     {
       name: "Samsung Curved Monitor",
       price: 0.001,
-      imageUrl: "/assets/images/cart/cart2.jpg",
+      imageUrl: "/assets/images/cart/Cart2.jpg",
     },
     {
       name: "Starlink",
       price: 0.001,
-      imageUrl: "/assets/images/cart/cart3.jpg",
+      imageUrl: "/assets/images/cart/Cart3.jpg",
     },
     {
       name: "Alienware M15 R6 Laptop",
       price: 0.001,
-      imageUrl: "/assets/images/cart/cart4.jpg",
+      imageUrl: "/assets/images/cart/Cart4.jpg",
     },
     {
       name: "Smartwatch",
       price: 0.001,
-      imageUrl: "/assets/images/cart/cart5.jpg",
+      imageUrl: "/assets/images/cart/Cart5.jpg",
     },
     {
       name: "Smart clear Anti-blue light",
       price: 0.001,
-      imageUrl: "/assets/images/cart/cart6.jpg",
+      imageUrl: "/assets/images/cart/Cart6.jpg",
     },
   ];
 
