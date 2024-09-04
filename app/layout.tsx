@@ -9,11 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Chain Store",
-<<<<<<<<< Temporary merge branch 1
+
   description: "The ultimate Web3 store for you",
-=========
-  description: "The ultimate web3 store for you!!",
->>>>>>>>> Temporary merge branch 2
+
 };
 
 export default function RootLayout({

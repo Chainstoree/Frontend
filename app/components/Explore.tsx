@@ -22,7 +22,7 @@ const ExploreProduct = () => {
     console.log("Fetching image data");
     try {
       const response = await fetch(
-        "https://chainstore-backend.onrender.com/api/v1/ecommerce/products/get"
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/v1/ecommerce/products/get`
       );
       console.log("Response object:", response);
       if (response.ok) {
