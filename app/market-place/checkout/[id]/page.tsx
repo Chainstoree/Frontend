@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import LoadingSkeleton from "@/app/components/LoadingSkeleton";
+import Modal from "@/app/components/modal";
 
 interface Params {
   product_name: string;
@@ -27,6 +28,8 @@ const checkOut = ({ params }: { params: Params }) => {
   const [amount, setAmount] = useState<Ionic["amount"]>(1);
   const [price, setPrice] = useState<Ionic["price"]>(0.0005);
   const [product, setProduct] = useState({} as Params);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const fetchProductById = async () => {
     try {
@@ -75,6 +78,11 @@ const checkOut = ({ params }: { params: Params }) => {
   useEffect(() => {
     fetchProductById();
   }, []);
+
+  const handleBuyNowClick = () => {
+    // Handle the purchase logic here (e.g., API call)
+    setIsModalOpen(true); // Open the modal after a successful purchase
+  };
 
   return (
     <section>
@@ -154,7 +162,7 @@ const checkOut = ({ params }: { params: Params }) => {
                    </button>
                  </div>
                  <div>
-                   <button className="bg-[#008080] rounded-sm py-2 px-10">
+                   <button className="bg-[#008080] rounded-sm py-2 px-10" onClick={()=>handleBuyNowClick()}>
                      Buy Now
                    </button>
                  </div>
@@ -189,10 +197,10 @@ const checkOut = ({ params }: { params: Params }) => {
                </div>
              </div>
            </div>
-         
        ) : (
          <LoadingSkeleton />
        )}
+        <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       </div>
     </section>
   );
