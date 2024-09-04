@@ -623,3 +623,26 @@ export const CONTRACT = getContract({
     address: contractAddress,
     abi: contractAbi,
 })
+
+// Iphone 14 NFT URI
+// https://ipfs.io/ipfs/QmTxYoNbeDbdhzHURTF8z2MCx3wyRWxdVRn6JjHQDSFEbP
+
+
+// Starlink NFT URI
+// https://ipfs.io/ipfs/QmW3BnbAakw8wdp7QnJsgf1opSwiRTotmBJj8UwWAwnx46
+
+
+// Samsung NFT URI
+// https://ipfs.io/ipfs/QmZqTRozbyZrts3Z66JPyPUk3DZbW5V3Xbxqk55wiShaqm
+
+
+// SmartWatch NFT URI
+// https://ipfs.io/ipfs/QmTynNrbJrecLy1sjRmPNDnz1RaijpeeJw6eXGT1KDH3SJ
+
+
+// Alienware NFT URI
+// https://ipfs.io/ipfs/QmQnjC6w96po2fbuJcT1biEgQDjdjdgabTtSaQmNwTnmmq
+
+
+// Blue Ray Glass NFT URI
+// https://ipfs.io/ipfs/Qmb2gBuhWTsgBXSHXoREXDNCcm1evH38uwp6reiT85CALY
