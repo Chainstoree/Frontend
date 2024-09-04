@@ -21,8 +21,6 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           <Link
             href={"/market-place"}
             className="hover:underline hover:underline-offset-1 text-blue-500"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             Go to Marketplace
           </Link>
