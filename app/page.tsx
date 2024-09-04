@@ -17,15 +17,14 @@ export default function Home() {
       <Navbar />
       <section className="w-full h-full pt-24">
         <div className="p-4">
-          <div className="w-full min-h-[430px] p-10 rounded-md bg-gradient-to-t from-[#008080] via-black to-[#001A1A] relative">
-            <Image
-              src="/assets/images/bgconical.svg"
-              alt="bg-conical"
-              width={1000}
-              height={800}
-              quality={80}
-              className="absolute top-0 left-0 w-full h-full object-cover"
-            />
+        <div
+        className="w-full flex h-[430px] rounded-md opacity-80 bg-gradient-to-r opacity-85 from-[#008080] via-black to-[#001A1A] relative"
+        style={{
+          backgroundImage: 'url("/assets/images/bgconical.svg")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
             <h1 className="text-5xl absolute right-[14vw] top-[9vh]">
               Shop{" "}
               <span className="bg-gradient-to-r from-[#008080] to-[#69F5F5] bg-clip-text text-transparent">
