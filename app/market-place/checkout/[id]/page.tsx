@@ -129,8 +129,8 @@ const checkOut = ({ params }: { params: ProductParams }) => {
       <Navbar />
       <div className="w-full h-full pt-28 p-10 px-20 bg-gradient-to-b from-[#008080] to-black font-orbitron">
         {product ? (
-          <div className="flex justify-between gap-4">
-            <div className="w-1/2">
+          <div className="flex flex-col sm:flex-row justify-between gap-4">
+            <div className="w-full sm:w-1/2">
               {product?.image ? (
                 <Image
                   src={convertGoogleDriveUrl(product?.image)}
@@ -143,7 +143,7 @@ const checkOut = ({ params }: { params: ProductParams }) => {
                 <div className="bg-[#1ba6a6d5] animate-pulse rounded-md w-full h-full"></div>
               )}
             </div>
-            <div className="flex flex-col gap-2 font-poppins w-1/2 self-center">
+            <div className="flex flex-col gap-2 font-poppins w-full sm:w-1/2 self-center">
               {/* Product name */}
               <h1 className="first-letter:uppercase text-2xl">
                 {product.product_name}
