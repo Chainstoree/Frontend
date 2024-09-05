@@ -1,7 +1,9 @@
-import Link from "next/link";
+"use  lient"
+
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight, faTimes } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 interface ModalProps {
   isOpen: boolean;
@@ -38,8 +40,8 @@ const LandingPageModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
     <div className="text-center" key="step-4">
       <h2 className="text-lg font-bold">Step 4: Add Faucet Funds</h2>
       <p>
-        - Open <a href="https://sepolia-faucet.lisk.com">Sepolia Faucet</a> in a new tab.<br />
-        - Paste your copied wallet address into the input field on the faucet page.<br />
+        - Open <Link href="https://faucets.chain.link/sepolia">Chainlink faucet</Link> and claim sepolia Eth.<br />
+        - Then, you go to <Link href="https://sepolia-bridge.lisk.com/bridge/lisk-sepolia-testnet">Lisk sepolia bridge</Link> and bridge the sepolia Eth to Lisk sepolia Eth.<br />
         - Request funds and the faucet will send them to your wallet within a few minutes.
       </p>
     </div>,
