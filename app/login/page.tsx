@@ -81,7 +81,7 @@ const Login = () => {
   return (
     <div className="w-full h-full">
       <div
-        className="w-full flex min-h-screen rounded-md opacity-80 bg-gradient-to-r opacity-85 from-[#008080] via-black to-[#001A1A] relative"
+        className="w-full flex flex-col sm:flex-row min-h-screen rounded-md opacity-80 bg-gradient-to-r opacity-85 from-[#008080] via-black to-[#001A1A] relative"
         style={{
           backgroundImage: 'url("/assets/images/bgconical.svg")',
           backgroundSize: "cover",
@@ -89,7 +89,7 @@ const Login = () => {
         }}
       >
         {/* First half */}
-        <div className="w-1/2 flex flex-col justify-center items-center">
+        <div className="w-full sm:w-1/2 flex flex-col justify-center items-center">
           <div className="bg-gradient-to-b w-full h-full from-[#008080] to-black p-10 font-orbitron">
             <Image
               src={"/assets/images/arrow-down-icon.svg"}
@@ -123,7 +123,7 @@ const Login = () => {
         </div>
 
         {/* Second half */}
-        <div className="w-1/2 flex p-20 justify-center items-center">
+        <div className="w-full sm:w-1/2 flex p-3 sm:p-20 justify-center items-center">
           <div className="border-2 border-[#008080] p-5 w-full h-full rounded-xl flex flex-col font-orbitron gap-2 backdrop-blur-md bg-[#00000094] items-center">
             <Image
               src={"/assets/images/chainStore.svg"}

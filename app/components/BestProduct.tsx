@@ -56,17 +56,11 @@ const BestProduct = () => {
         height={200}
         alt="category"
       />
-      <div className="flex justify-between pt-2">
+      <div className="flex pt-4">
         <h1 className="font-orbitron text-3xl">Best Selling Products</h1>
-        <Image
-          src="/assets/images/Button.svg"
-          width={100}
-          height={100}
-          alt="category"
-        />
       </div>
       {imageData && imageData.length > 0 ? (
-        <div className="grid grid-cols-3 gap-4 pt-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
           {imageData.map((product) => (
             <div className="rounded-md shadow-lg p-4">
             <Image

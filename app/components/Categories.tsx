@@ -15,14 +15,8 @@ const Categories = () => {
         height={200}
         alt="category"
       />
-      <div className="flex justify-between pt-2">
+      <div className="flex sm:pt-2">
         <h1 className="font-orbitron text-3xl">Browse By Category</h1>
-        <Image
-          src="/assets/images/icon.svg"
-          width={100}
-          height={100}
-          alt="category"
-        />
       </div>
       <div className="grid grid-cols-3 gap-4 pt-4">
         {imageUrl.map((image, index) => (

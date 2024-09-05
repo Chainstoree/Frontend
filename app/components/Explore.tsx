@@ -63,8 +63,8 @@ const ExploreProduct = () => {
       </div>
       <div className="p-6 px-10">
         {products && products.length > 0 ? (
-          <div className="grid grid-cols-3 gap-4 pt-4">
-            {products.map((product, index) => (
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
+            {products.map((product) => (
               <div key={product.product_id} className="rounded-md shadow-lg p-4">
                 <Image
                   src={convertGoogleDriveUrl(product.image)}

@@ -4,7 +4,7 @@ const Advertisement = () => {
 
   return (
     <div className="p-6">
-        <div className="bg-[#FEDB07] w-full p-4 rounded-md flex justify-between">
+        <div className="bg-[#FEDB07] w-full p-4 rounded-md flex sm:flex-row flex-col justify-between">
             <div className="flex flex-col py-10 text-black pl-10 w-full font-orbitron">
                 <h1 className="text-3xl pb-2">
                     Shop with Crypto and 
