@@ -9,7 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Chain Store",
-  description: "The ultimate web3 store for you!!",
+
+  description: "The ultimate Web3 store for you",
+
 };
 
 export default function RootLayout({

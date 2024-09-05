@@ -40,6 +40,7 @@ const checkOut = ({ params }: { params: ProductParams }) => {
   const [price, setPrice] = useState<Ionic["price"]>(0.0005);
   const [product, setProduct] = useState({} as ProductParams);
   const [totalAmount, setTotalAmount] = useState(0);
+  const [tokenUri , setTokenUri] = useState("");
 
   const [isModalOpen, setIsModalOpen] = useState(false);
     const account = useActiveAccount?.();
@@ -81,6 +82,23 @@ const checkOut = ({ params }: { params: ProductParams }) => {
   useEffect(() => {
     setTotalAmount(amount * product.price);
   }, [amount, product.price]);
+useEffect(() => {
+  const uri =
+    product.product_name === "iPhone 14 pro max"
+      ? "https://ipfs.io/ipfs/QmTxYoNbeDbdhzHURTF8z2MCx3wyRWxdVRn6JjHQDSFEbP"
+      : product.product_name === "Black watch"
+      ? "https://ipfs.io/ipfs/QmTynNrbJrecLy1sjRmPNDnz1RaijpeeJw6eXGT1KDH3SJ"
+      : product.product_name === "Samsung curved monitor"
+      ? "https://ipfs.io/ipfs/QmZqTRozbyZrts3Z66JPyPUk3DZbW5V3Xbxqk55wiShaqm"
+      : product.product_name === "Alienware M15 R6 Laptop"
+      ? "https://ipfs.io/ipfs/QmQnjC6w96po2fbuJcT1biEgQDjdjdgabTtSaQmNwTnmmq"
+      : product.product_name === "Starlink"
+      ? "https://ipfs.io/ipfs/QmW3BnbAakw8wdp7QnJsgf1opSwiRTotmBJj8UwWAwnx46"
+      : "https://ipfs.io/ipfs/Qmb2gBuhWTsgBXSHXoREXDNCcm1evH38uwp6reiT85CALY";
+
+  setTokenUri(uri);
+  console.log("URI", uri);
+}, [product]);
 
   // Increment and Decrement functions
   const incrementAmount = () => {
@@ -205,34 +223,19 @@ const checkOut = ({ params }: { params: ProductParams }) => {
                       contract: CONTRACT,
                       method: "buyProduct",
                       params: [
-                        product.product_name === "iPhone 14 pro max"
-                          ? "https://ipfs.io/ipfs/QmTxYoNbeDbdhzHURTF8z2MCx3wyRWxdVRn6JjHQDSFEbP"
-                          : product.product_name === "Black watch"
-                          ? "https://ipfs.io/ipfs/QmTynNrbJrecLy1sjRmPNDnz1RaijpeeJw6eXGT1KDH3SJ"
-                          : product.product_name === "Samsung curved monitor "
-                          ? "https://ipfs.io/ipfs/QmZqTRozbyZrts3Z66JPyPUk3DZbW5V3Xbxqk55wiShaqm"
-                          : product.product_name === "Alienware M15 R6 Laptop"
-                          ? "https://ipfs.io/ipfs/QmQnjC6w96po2fbuJcT1biEgQDjdjdgabTtSaQmNwTnmmq"
-                          : product.product_name === "Starlink"
-                          ? "https://ipfs.io/ipfs/QmW3BnbAakw8wdp7QnJsgf1opSwiRTotmBJj8UwWAwnx46"
-                          : "https://ipfs.io/ipfs/Qmb2gBuhWTsgBXSHXoREXDNCcm1evH38uwp6reiT85CALY",
-                        BigInt(totalAmount),
+                       tokenUri,
+                        BigInt(toWei(totalAmount.toString())),
                       ],
                       value: BigInt(toWei(totalAmount.toString())),
                     });}}
-                    // onError={(err) => delegateNotComplete(err)}
+                    onError={(err) => window.alert(err)}
                     onTransactionConfirmed={() => handleBuyNowClick()}
                     style={{ backgroundColor: "#008080", color: "#ffffff" }}
                     className="bg-primary text-white p-3 rounded-full"
                   >
                     Buy now
                   </TransactionButton>
-                  {/* <button
-                    className="bg-[#008080] rounded-sm py-2 px-10"
-                    onClick={() => handleBuyNowClick()}
-                  >
-                    Buy Now
-                  </button> */}
+             
                 </div>
               </div>
               <div className="flex flex-col">
