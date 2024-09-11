@@ -76,7 +76,7 @@ export default function Home() {
               backgroundPosition: "center",
             }}
           >
-            <h1 className="text-4xl sm:text-5xl flex gap-2 justify-center sm:pl-80">
+            <h1 className="text-3xl sm:text-5xl flex gap-2 justify-center sm:pl-80">
               Shop{" "}
               <span className="bg-gradient-to-r from-[#008080] to-[#69F5F5] bg-clip-text text-transparent">
                 Smarter
@@ -87,7 +87,7 @@ export default function Home() {
               </span>
             </h1>
             <div className="flex flex-col gap-4 sm:gap-0 sm:flex-row-reverse sm:justify-center">
-              <h1 className="text-4xl bg-gradient-to-r from-[#008080] to-[#69F5F5] bg-clip-text text-transparent pl-4 sm:pl-0 sm:text-5xl">
+              <h1 className="text-3xl bg-gradient-to-r from-[#008080] to-[#69F5F5] bg-clip-text text-transparent pl-4 sm:pl-0 sm:text-5xl">
                 Technology
               </h1>
 

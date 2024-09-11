@@ -63,7 +63,7 @@ const ExploreProduct = () => {
       </div>
       <div className="p-6 px-10">
         {products && products.length > 0 ? (
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
             {products.map((product) => (
               <div key={product.product_id} className="rounded-md shadow-lg p-4">
                 <Image
@@ -72,6 +72,7 @@ const ExploreProduct = () => {
                   height={300}
                   alt={product.product_name}
                   className="rounded-md w-[18.75rem] h-[13.2125rem] object-cover"
+                  onClick={()=>handleBuy(product.product_id)}
                 />
                 <h2 className="text-xl text-center font-bold mt-4">{product.product_name}</h2>
                 <p className="text-lg text-gray-500 text-center">Price: {product.price} ETH</p>

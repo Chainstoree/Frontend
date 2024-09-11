@@ -87,15 +87,17 @@ const LandingPageModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         </div>
 
         {/* Navigation Buttons */}
-        <div className="absolute top-1/2 -left-6 transform -translate-y-1/2">
-          <button onClick={prevSlide} className="text-white">
-            <FontAwesomeIcon icon={faArrowLeft} size="2x" />
-          </button>
-        </div>
-        <div className="absolute top-1/2 -right-6 transform -translate-y-1/2">
-          <button onClick={nextSlide} className="text-white">
-            <FontAwesomeIcon icon={faArrowRight} size="2x" />
-          </button>
+        <div className='flex items-center justify-around w-full '>
+          <div className=" bottom-1/2 -left-6 transform -translate-y-1/2">
+            <button onClick={prevSlide} className="text-white">
+              <FontAwesomeIcon icon={faArrowLeft} size="2x" />
+            </button>
+          </div>
+          <div className=" bottom-1/2 -right-6 transform -translate-y-1/2">
+            <button onClick={nextSlide} className="text-white">
+              <FontAwesomeIcon icon={faArrowRight} size="2x" />
+            </button>
+          </div>
         </div>
       </div>
     </div>

@@ -60,7 +60,7 @@ const BestProduct = () => {
         <h1 className="font-orbitron text-3xl">Best Selling Products</h1>
       </div>
       {imageData && imageData.length > 0 ? (
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
           {imageData.map((product) => (
             <div className="rounded-md shadow-lg p-4">
             <Image

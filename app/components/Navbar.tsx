@@ -125,7 +125,7 @@ const Navbar = () => {
             >
               Marketplace
             </Link>
-            {account != undefined ? (
+            {/* {account != undefined ? (
               <div className="h-fit w-fit">
                 <ConnectButton
                   client={client}
@@ -158,7 +158,7 @@ const Navbar = () => {
               >
                 Connect Wallet
               </button>
-            )}
+            )} */}
           </div>
         )}
       </section>
